@@ -1,0 +1,140 @@
+.press {
+  padding-top: 88px;
+  padding-bottom: 88px;
+  background-color: var(--light-color);
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 33px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--second-family);
+    color: var(--dark-color);
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 38px; /* 140.741% */
+    letter-spacing: 1.2px;
+  }
+
+  &__link {
+    color: #00413e;
+    border-radius: 80px;
+    border: 1px solid rgba(53, 83, 98, 0.20);
+  }
+
+  &__list {
+    row-gap: 32px;
+  }
+
+  &__item {
+    grid-column: 4 span;
+  }
+}
+
+.press-card {
+  position: relative;
+  min-height: 145px;
+  border-top: 1px solid rgba(53, 83, 98, 0.30);
+  padding-top: 16px;
+  transition: color 0.3s ease-in-out;
+
+  @include hover{
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+  &:active{
+    color: var(--active-color);
+    border-color: var(--active-color);
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+    gap: 16px;
+  }
+
+  &__author {
+    margin: -18px 0;
+    padding: 18px 0;
+    color: var(--text-color);
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px; /* 145.455% */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding-left: 32px;
+    background-position: left top 15px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &--ted {
+      background-image: url("../../img/ted.png");
+    }
+
+    &--correction_news {
+      background-image: url("../../img/correction_news.png");
+    }
+
+    &--justice {
+      background-image: url("../../img/justice.png");
+    }
+
+    &--nyt {
+      background-image: url("../../img/nyt.png");
+    }
+
+    &--c1 {
+      background-image: url("../../img/c1.png");
+    }
+
+    &--crime {
+      background-image: url("../../img/crime.png");
+    }
+
+  }
+
+  &__date {
+    color: var(--text-color);
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px; /* 145.455% */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0;
+    color: #00413E;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24.65px;
+  }
+
+  &__link {
+    color: inherit;
+    transition: color 0.3s ease-in-out;
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+    @include hover{
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+    &:active{
+      color: var(--active-color);
+      border-color: var(--active-color);
+    }
+  }
+}
+.press-card__link.focus-visible{
+  &::after{
+    outline: 1px solid var(--active-color);
+  }
+}

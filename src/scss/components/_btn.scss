@@ -1,4 +1,4 @@
-.btn{
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -9,4 +9,25 @@
   line-height: 20px;
   letter-spacing: 0.02px;
   text-align: center;
+  color: var(--light-color);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include hover {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+  }
+
+  &:active {
+    border-color: var(--active-color);
+    background-color: var(--active-color);
+  }
+}
+
+.btn.focus-visible {
+  border-color: var(--active-color);
 }

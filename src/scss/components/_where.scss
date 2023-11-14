@@ -1,0 +1,36 @@
+.where{
+  background-color: #001f1f;
+  padding: 155px 0 133px 0;
+  &__content{
+    grid-column: 4 span;
+  }
+  &__title{
+    margin: 0;
+    margin-bottom: 43px;
+    color: #fafafa;
+    font-family: var(--second-family);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 52px; /* 144.444% */
+    letter-spacing: 1.2px;
+  }
+  &__descr{
+    margin: 0;
+    margin-bottom: 37px;
+    width: 326px;
+    color: #fafafa;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+  }
+  &__map{
+    grid-column: 7/5 span;
+  }
+  &__btn{
+    font-size: 14px;
+    border-radius: 80px;
+    background: #00665F;
+  }
+
+}
