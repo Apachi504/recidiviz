@@ -1,8 +1,14 @@
 .where{
   background-color: #001f1f;
   padding: 155px 0 133px 0;
+  @include small-tablet{
+   padding: 75px 0 65px 0;
+  }
   &__content{
     grid-column: 4 span;
+    @include small-tablet{
+      margin-bottom: 20px;
+    }
   }
   &__title{
     margin: 0;
@@ -26,6 +32,9 @@
   }
   &__map{
     grid-column: 7/5 span;
+    @include small-tablet{
+      grid-column: 4 span;
+    }
   }
   &__btn{
     font-size: 14px;

@@ -2,6 +2,10 @@
   position: relative;
   padding-bottom: 140px;
   background-color: #f4f5f5;
+  @include small-tablet{
+    padding-bottom: 70px;
+  }
+
   &__title {
     margin: 0;
     max-width: 78%;
@@ -11,9 +15,15 @@
     font-weight: 400;
     line-height: 38px; /* 122.581% */
     letter-spacing: 1.2px;
+    @include small-tablet{
+      margin-bottom: 20px;
+    }
   }
   &__text {
     grid-column: 5 span;
+    @include small-tablet{
+      grid-column: 4 span;
+    }
   }
   &__list {
     display: grid;
@@ -21,9 +31,16 @@
     grid-column: 7/6 span;
     grid-template-columns: repeat(6,1fr);
     row-gap: 36px;
+    @include small-tablet{
+      grid-column: 4 span;
+      grid-template-columns: repeat(4,1fr);
+    }
   }
   &__item{
     grid-column: 3 span;
+    @include small-tablet{
+      grid-column: 4 span;
+    }
   }
 
   &__subtitle {

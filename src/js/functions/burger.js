@@ -1,5 +1,5 @@
-import { disableScroll } from '../functions/disable-scroll';
-import { enableScroll } from '../functions/enable-scroll';
+import { disableScroll } from './disable-scroll';
+import { enableScroll } from './enable-scroll';
 
 (function(){
   const burger = document?.querySelector('[data-burger]');
@@ -7,7 +7,7 @@ import { enableScroll } from '../functions/enable-scroll';
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const overlay = document?.querySelector('[data-menu-overlay]');
 
-  burger?.addEventListener('click', (e) => {
+  burger?.addEventListener('click', () => {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('menu--active');
 

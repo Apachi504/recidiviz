@@ -8,6 +8,10 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 33px;
+    @include small-tablet{
+      flex-wrap: wrap;
+      gap: 20px;
+    }
   }
 
   &__title {

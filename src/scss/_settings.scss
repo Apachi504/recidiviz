@@ -112,10 +112,24 @@ a {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: repeat(12, 1fr);
   column-gap: var(--offset);
+  @include small-tablet {
+    grid-template-columns: repeat(4, 1fr);
+
+  }
 }
-.graphics{
+
+.graphics {
   width: 100%;
   background-color: #f4f5f5;
+}
+.burger {
+  @include burger;
+  display: none;
+  --burger-height: 20px;
+  color: var(--light-color);
+  @include small-tablet{
+    display: block;
+  }
 }
